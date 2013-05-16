@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>jQuery Sticky Scroll</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 10px;
+        }
+
+        #header {
+            height: 100px;
+            margin: 0 0 10px;
+            background: #eee;
+        }
+
+        .content {
+            position: relative;
+            float: right;
+            width: 100%;
+            height: 1000px;
+            margin: 0 0 10px -110px;
+        }
+        
+        .content:nth-child(3n+1) .side {
+        	background: #f1c40f;
+        }
+        
+        .content:nth-child(3n+2) .side {
+        	background: #3498db;
+        }
+
+        .main {
+            height: 1000px;
+            margin-left: 110px;
+            background: #eee;
+            padding: 50px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .side {
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 300px;
+            margin: 0 10px 0 0;
+            background: #1abc9c;
+        }
+
+        #footer {
+            height: 100px;
+            clear: both;
+            background: #eee;
+        }
+        
+        .btn {
+        	border: 4px solid #ddd;
+        	padding: 10px 20px;
+        	color: #464646;
+        	text-decoration: none;
+        	background: white;
+        	display: inline-block;
+        }
+        
+        .btn:hover {
+        	color: white;
+        	background: #464646;
+        	border-color: #464646;
+        }
+        
+        .main ul {
+        	list-style-type: none;
+        }
+        
+        .main li {
+        	display: inline-block;
+        	margin-right: 10px;
+        	margin-bottom: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div class="content">
+        <div class="side"></div>
+        <div class="main">
+        	<ul>
+        		<li><a class="btn" href="javascript:$.StickyScroll.destroy( $('.side') )">$.StickyScroll.destroy( $('.side') )</a></li>
+        		<li><a class="btn" href="javascript:$('.side').StickyScroll()">$('.side').StickyScroll()</a></li>
+        		<li><a class="btn" href="javascript:$('.side').StickyScroll({range:{min:760}})">$('.side').StickyScroll({range:{min:760}})</a></li>
+        	</ul>
+			
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="side"></div>
+        <div class="main"></div>
+    </div>
+
+    <div class="content">
+        <div class="side"></div>
+        <div class="main"></div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.sticky-scroll.js"></script>
+    <script>
+        $(function() {
+            $('.side').StickyScroll();
+        });
+    </script>
+
+</body>
+</html>

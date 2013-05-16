@@ -1,0 +1,26 @@
+{
+  "name": "sticky-scroll",
+  "version": "0.0.3",
+  "description": "Make elements stick to the top of your page as you scroll",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kerotaa/jquery.sticky-scroll.js.git"
+  },
+  "author": {
+	"name": "kerotaa",
+	"url": "http://kerotaa.hateblo.jp/"
+  },
+  "license": {
+	"name": "MIT",
+	"url": "http://www.opensource.org/licenses/mit-license.php",
+	"since": "2013"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib": "~0.6.1"
+  }
+}
