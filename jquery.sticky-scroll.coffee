@@ -135,9 +135,8 @@
 		bottom: null,
 		container: null,
 		gap: 0,
-		isFixed: $.noop,
 		range:
-			min: null
+			min: null,
 			max: null
 
 	return
