@@ -58,7 +58,7 @@
 					elemPos = _$elem.offset()
 
 				if ( top < _configs.gap )
-					top = 0 if (!_fromTop)
+					top = _configs.gap if (!_fromTop)
 					if (top - _configs.gap < winTargetGap )
 						_nowFixed = true
 						if (winTargetGap > 0)

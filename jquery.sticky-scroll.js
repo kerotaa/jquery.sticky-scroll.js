@@ -1,5 +1,5 @@
 /*!
- * jquery.sticky-scroll.js - v0.0.2 - https://github.com/kerotaa/jquery.sticky-scroll.js
+ * jquery.sticky-scroll.js - v0.0.3 - https://github.com/kerotaa/jquery.sticky-scroll.js
  * Make elements stick to the top of your page as you scroll
  * 
  * 
@@ -72,7 +72,7 @@
         }
         if (top < _configs.gap) {
           if (!_fromTop) {
-            top = 0;
+            top = _configs.gap;
           }
           if (top - _configs.gap < winTargetGap) {
             _nowFixed = true;
